@@ -86,6 +86,7 @@ void mainTask(void *params){
 
 	while (true) { // Loop forever
 		runTimeStats();
+		printf("Jade F14128807");
 		vTaskDelay(3000);
 	}
 }
