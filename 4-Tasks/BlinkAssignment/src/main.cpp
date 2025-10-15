@@ -21,7 +21,7 @@
 #define TASK_PRIORITY		( tskIDLE_PRIORITY + 1UL )
 
 //LED PAD to use
-#define LED_PAD				0
+#define LED_PAD				1
 #define LED1_PAD			2
 #define LED2_PAD			3
 
@@ -94,7 +94,8 @@ void mainTask(void *params){
 
 	while (true) { // Loop forever
 		runTimeStats();
-		vTaskDelay(3000);
+		vTaskDelay(2000);
+		printf("Jade REBEYROLLE F14128807");
 	}
 }
 
