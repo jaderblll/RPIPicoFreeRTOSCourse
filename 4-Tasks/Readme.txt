@@ -47,3 +47,12 @@ And also this :
 	}
 
 
+How many tasks you could create via RP2040 now?
+
+After experimenting with the Chapter 4 program and increasing the number of tasks,
+the RP2040 was able to handle around 80–100 FreeRTOS tasks running simultaneously (depending on stack size and code complexity).
+
+Each task consumes memory for its stack and control block, and once the 264 KB RAM of the RP2040 is full, new tasks can no longer be created.
+
+Beyond this limit, the scheduler fails to start new tasks or the board resets due to memory exhaustion.
+
