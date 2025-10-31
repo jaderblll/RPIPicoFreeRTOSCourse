@@ -24,3 +24,4 @@ while (true) { // Loop forever
     printf("Jade REBEYROLLE F14128807");
 	}
 
+Because the counting semaphore only provides two tokens, only two LEDs can blink at the same time. The other tasks must wait until a token is released.
