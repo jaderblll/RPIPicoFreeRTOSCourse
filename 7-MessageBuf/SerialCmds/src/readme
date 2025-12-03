@@ -1,5 +1,6 @@
 In main.cpp :
 
+
 1 -  In main.cpp, we changed the value here of the ledpad :
 
 //LED PAD to use
@@ -18,3 +19,12 @@ In main.cpp :
 		vTaskDelay(3000);
 		printf("REBEYROLLE Jade F14128807 and YABA-LEY Leyson F14128811")
 	}
+
+
+In IOAgent.h :
+
+
+1- I swapped the values here :
+
+#define IO_AGENT_RX_PAD 17
+#define IO_AGENT_TX_PAD 16
