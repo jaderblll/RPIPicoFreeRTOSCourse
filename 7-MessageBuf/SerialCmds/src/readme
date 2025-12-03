@@ -1,0 +1,20 @@
+In main.cpp :
+
+1 -  In main.cpp, we changed the value here of the ledpad :
+
+//LED PAD to use
+#define LED_PAD				25
+#define LED1_PAD			2
+#define LED2_PAD			3
+#define LED3_PAD			4
+#define LED4_PAD			5
+#define LED5_PAD		  8
+
+
+2- Then, I put our names (my name and my partner name) with our student ID :
+
+	while (true) { // Loop forever
+		runTimeStats();
+		vTaskDelay(3000);
+		printf("REBEYROLLE Jade F14128807 and YABA-LEY Leyson F14128811")
+	}
