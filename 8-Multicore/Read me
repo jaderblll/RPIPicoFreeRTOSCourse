@@ -1,0 +1,23 @@
+1- In main :
+
+
+I put my name with my student ID :
+
+	while (true) { // Loop forever
+		runTimeStats();
+		printf("Main on Core %ld\n",sio_hw->cpuid);
+		printf("REBEYROLLE JADE F14128807");
+		uint8_t r = rand()&0xF;
+		counter.on(r);
+		vTaskDelay(3000);
+	}
+
+So it will appear in the terminal.
+
+
+2- In Cmakelist :
+
+
+I changed the line 21 to make it work.
+
+include("pico_sdk_import.cmake")
