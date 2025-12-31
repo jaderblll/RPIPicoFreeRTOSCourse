@@ -1,0 +1,63 @@
+We did the same changes for the 3 codes.
+
+
+Cmakelist:
+
+1- I changed this line : 
+
+include(pico_sdk_import.cmake)
+
+
+Main.cpp: 
+
+1- In main, I put my name and my student ID : 
+
+while (true) {
+        runTimeStats();
+        uint8_t r = rand() & 0xFF;
+        counter.on(r);
+        printf("Count R=0x%X\n", r);
+        vTaskDelay(3000);
+		printf("Jade REBEYROLLE F14128807");
+    }
+
+2- Here, I define the whole LEDPAD for 8 leds: 
+
+#define TASK_PRIORITY		( tskIDLE_PRIORITY + 1UL )
+#define LED_PAD				0
+#define LED1_PAD			2
+#define LED2_PAD			3
+#define LED3_PAD			4
+#define LED4_PAD			5
+#define LED5_PAD			6
+#define LED6_PAD			7
+#define LED7_PAD			8
+#define LED8_PAD			9
+
+3- I also changed a line in maintask : 
+oid mainTask(void *params) {
+    BlinkAgent blink(LED_PAD);
+    CounterAgent counter(LED1_PAD, LED2_PAD, LED3_PAD, LED4_PAD, LED5_PAD, LED6_PAD, LED7_PAD, LED8_PAD);
+  
+
+CounterAgent.cpp :
+
+1- Here I put for the 8 leds and I put uint16 instead of uint8. 
+  
+  CounterAgent::CounterAgent(uint16_t gp1, uint16_t gp2, uint16_t gp3, uint16_t gp4, uint16_t gp5, uint16_t gp6, uint16_t gp7, uint16_t gp8) {
+
+	pLedPads[0] = gp1;
+	pLedPads[1] = gp2;
+	pLedPads[2] = gp3;
+	pLedPads[3] = gp4;
+	pLedPads[4] = gp5;
+	pLedPads[5] = gp6;
+	pLedPads[6] = gp7;
+	pLedPads[7] = gp8;
+
+    
+CounterAgent.h :
+    
+1- Here Ｉ ｃｈａｎｇｅｄ　ｔｈｉｓ　ｌｉｎｅ，　ｌｉｋｅ　ｔｈｅ　ｓａｍｅ　ｆｏｒ　ｃｏｕｎｔｅｒＡｇｅｎｔ．ｃｐｐ．
+    
+CounterAgent(uint16_t gp1=0, uint16_t gp2=0, uint16_t gp3=0, uint16_t gp4=0 , uint16_t gp5=0, uint16_t gp6=0, uint16_t gp7=0, uint16_t gp8=0);
