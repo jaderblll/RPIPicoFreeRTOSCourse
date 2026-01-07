@@ -58,6 +58,6 @@ CounterAgent.cpp :
     
 CounterAgent.h :
     
-1- Here Ｉ ｃｈａｎｇｅｄ　ｔｈｉｓ　ｌｉｎｅ，　ｌｉｋｅ　ｔｈｅ　ｓａｍｅ　ｆｏｒ　ｃｏｕｎｔｅｒＡｇｅｎｔ．ｃｐｐ．
+1- Here I changed this line like the same as CounterAgent.cpp : 
     
 CounterAgent(uint16_t gp1=0, uint16_t gp2=0, uint16_t gp3=0, uint16_t gp4=0 , uint16_t gp5=0, uint16_t gp6=0, uint16_t gp7=0, uint16_t gp8=0);
