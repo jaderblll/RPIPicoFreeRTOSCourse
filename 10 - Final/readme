@@ -35,7 +35,7 @@ while (true) {
 #define LED8_PAD			9
 
 3- I also changed a line in maintask : 
-oid mainTask(void *params) {
+void mainTask(void *params) {
     BlinkAgent blink(LED_PAD);
     CounterAgent counter(LED1_PAD, LED2_PAD, LED3_PAD, LED4_PAD, LED5_PAD, LED6_PAD, LED7_PAD, LED8_PAD);
   
